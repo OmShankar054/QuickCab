@@ -252,7 +252,7 @@ The request body must be in JSON format and include the following fields:
   }
 }
 ```
-- `fullname.firstname`: string, required, min 3 chars
+- `fullname.firstname`: string, required, min 3 chars  //based on the 
 - `fullname.lastname`: string, required, min 3 chars
 - `email`: string, required, valid email
 - `password`: string, required, min 6 chars
@@ -276,9 +276,9 @@ The request body must be in JSON format and include the following fields:
         "capacity": 4,
         "vehicleType": "car"
       },
-      "status": "inactive"
+      "status":  "inactive"
     },
-    "token": "JWT_TOKEN"
+    "token":  "JWT_TOKEN"
   }
   ```
 - **400 Bad Request**
@@ -318,7 +318,6 @@ The request body must be in JSON format and include:
 
 - `email`: A string (required, valid email format)
 - `password`: A string (required, minimum 6 characters)
-
 #### Example
 ```json
 {
@@ -393,7 +392,7 @@ Returns the authenticated captain's profile. Requires a valid JWT token in the c
   ```json
   {
     "captain": {
-      "_id": "CAPTAIN_ID",
+      "_id": "CAPTAIN_ID", //based on the preference. 
       "fullname": { "firstname": "Jane", "lastname": "Smith" },
       "email": "jane.smith@example.com",
       "vehicle": {
@@ -439,4 +438,6 @@ Logs out the authenticated captain by blacklisting the token and clearing the co
 ---
 
 > **Note:** All captain endpoints require proper validation and authentication as described above.
+
+
 
